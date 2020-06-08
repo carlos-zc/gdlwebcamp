@@ -1,5 +1,5 @@
 <?php 
-    $conn = new mysqli('localhost', 'root', 'root', 'gdlwebcamp');
+    $conn = new mysqli('sql10.freesqldatabase.com', 'sql10346755', 'xctvGFlmft', 'sql10346755');
     
     if($conn->connect_error) {
       echo $error -> $conn->connect_error;

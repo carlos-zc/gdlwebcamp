@@ -124,13 +124,13 @@
                 var diasElegidos = [];
 
                 if(boletosDia > 0){
-                    diasElegidos.push('Friday');
+                    diasElegidos.push('viernes');
                 }
                 if(boletos2Dias > 0){
-                    diasElegidos.push('Friday','Saturday');
+                    diasElegidos.push('viernes','sabado');
                 }
                 if(boletosCompletos > 0){
-                    diasElegidos.push('Friday','Saturday','Sunday');
+                    diasElegidos.push('viernes','sabado','domingo');
                 }
 
                 for(var i = 0; i < diasElegidos.length; i++){

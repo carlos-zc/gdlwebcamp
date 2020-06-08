@@ -96,6 +96,7 @@ $(function () {
 
   // LINE CHART 
     $.getJSON('servicio-registrados.php', function(data) {
+      console.log(data);
       
       new Morris.Line({
         // ID of the element in which to draw the chart.

@@ -58,7 +58,7 @@
                   <div class="form-group">
                     <label for="imagen-actual">Imagen Actual</label>
                     <br/>
-                    <img src="../img/invitados/<?= $invitado['url_imagen'] ?>" id="imagen-actual" class="imagen-invitado rounded" alt="Imagen del invitado">
+                    <img src="../img/invitados/<?= $invitado['url_imagen'] ?>" id="imagen-actual" height="200" alt="Imagen del invitado">
                   </div>
                   
                   <!-- INPUT PARA SUBIR ARCHIVOS -->

@@ -61,22 +61,22 @@
         </div>
     </footer>
     
-    
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.lettering.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js" integrity="sha256-GCAeRKCXFEtLTZ+gG1SCIrtGkYq1zZjMXkj+XUFNJqo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js" integrity="sha256-Ikk5myJowmDQaYVCUD0Wr+vIDkN8hGI58SGWdE671A8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js" integrity="sha256-7sov0P4cWkfKMVHQ/NvnWVqcLSPYrPwxdz+MtZ+ahl8=" crossorigin="anonymous"></script>
 
   <?php 
     $archivo = basename($_SERVER['PHP_SELF']);
     $pagina = str_replace(".php", "", $archivo);
     if($pagina == 'invitados' || $pagina == 'index'){
-        echo '<script src="js/jquery.colorbox-min.js"></script>';
+        echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.6.4/jquery.colorbox-min.js" integrity="sha256-QbxNT+iBOdbuiav8squsceFDDYXb/8C+fI9r029M7X4=" crossorigin="anonymous"></script>';
     } elseif ($pagina == 'conferencia'){
-        echo '<script src="js/lightbox.js"></script>';
+        echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" integrity="sha256-CtKylYan+AJuoH8jrMht1+1PMhMqrKnB8K5g012WN5I=" crossorigin="anonymous"></script>';
     }
   ?>
 
@@ -92,6 +92,16 @@
   <script src="https://www.google-analytics.com/analytics.js" async></script>
   <!-- Agrega modal de mailchimp q abre a los 5s -->
   <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us19.list-manage.com","uuid":"989bc88eae4d4db4b01f48b1c","lid":"5c581e5071","uniqueMethods":true}) })</script>
+
+  <?php
+        // Guarda todo el contenido a un archivo
+        $fp = fopen($archivoCache, 'w');
+        fwrite($fp, ob_get_contents());
+        fclose($fp);
+        // Enviar al navegador
+        ob_end_flush();
+    ?>
+
 </body>
 
 </html>

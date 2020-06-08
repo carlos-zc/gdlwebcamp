@@ -45,11 +45,3 @@ ul.lista-precios li .numero {
     color: #fe4918;
     font-weight: bold;
 }
-.imagen-invitado {
-    max-width: 100%;
-}
-@media only screen and (min-width: 768px) {
-    .imagen-invitado {
-        height: 200px;
-    }
-}

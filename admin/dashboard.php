@@ -104,13 +104,12 @@
                     $sql = "SELECT SUM(total_pagado) AS ganancias FROM registrados WHERE pagado = 1";
                     $resultado = $conn->query($sql);
                     $registrados = $resultado->fetch_assoc();
-                    $ganancias = round($registrados['ganancias'], 2);
                 
                 ?>
                 <!-- small card -->
                 <div class="small-box bg-success">
                     <div class="inner">
-                        <h3>$ <?= $ganancias ?></h3>
+                        <h3>$ <?= $registrados['ganancias'] ?></h3>
             
                         <p>Ganancias totales</p>
                     </div>

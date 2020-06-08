@@ -1,0 +1,55 @@
+.login-page .main-footer {
+    display: none;
+}
+/* OCULTA EL NOMBRE DEL USUARIO EN LA BARRA, EN TFNO
+.nombre-usuario {
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .nombre-usuario {
+        display: inline;
+    }
+} */
+.contenido-dia {
+    display: none;
+}
+h4.nombre-dia {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fe4918;
+}
+ul.lista-precios,
+.tabla-precio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.lista-precios > li {
+    margin-bottom: 1.6rem;
+}
+ul.lista-precios li .numero {
+    font-size: 30px;
+}
+.tabla-precio h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fe4918;
+    min-height: 50px;
+}
+.contenido-dia label {
+    font-weight: normal!important;
+}
+.contenido-dia time {
+    color: #fe4918;
+    font-weight: bold;
+}
+.imagen-invitado {
+    max-width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    .imagen-invitado {
+        height: 200px;
+    }
+}

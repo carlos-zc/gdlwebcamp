@@ -124,13 +124,25 @@
                 var diasElegidos = [];
 
                 if(boletosDia > 0){
-                    diasElegidos.push('Friday');
+                    if (document.getElementById('viernes')) { // agrega los dias segun el idioma, ya que no siempre detecta la configuracion en español por alguna razon
+                        diasElegidos.push('viernes');
+                    } else {
+                        diasElegidos.push('Friday');
+                    }
                 }
                 if(boletos2Dias > 0){
-                    diasElegidos.push('Friday','Saturday');
+                    if (document.getElementById('viernes')) { // agrega los dias segun el idioma, ya que no siempre detecta la configuracion en español por alguna razon
+                        diasElegidos.push('viernes', 'sabado');
+                    } else {
+                        diasElegidos.push('Friday','Saturday');
+                    }
                 }
                 if(boletosCompletos > 0){
-                    diasElegidos.push('Friday','Saturday','Sunday');
+                    if (document.getElementById('viernes')) { // agrega los dias segun el idioma, ya que no siempre detecta la configuracion en español por alguna razon
+                        diasElegidos.push('viernes','sabado','domingo');
+                    } else {
+                        diasElegidos.push('Friday','Saturday','Sunday');
+                    }
                 }
 
                 for(var i = 0; i < diasElegidos.length; i++){

@@ -18,7 +18,7 @@ $(document).ready(function() {
                         'success'
                     )
                     setTimeout(function() {
-                        window.location.href = "admin-area.php";
+                        window.location.href = "index.php";
                     }, 2000);
                 } else {
                     Swal.fire(

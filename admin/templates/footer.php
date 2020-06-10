@@ -31,6 +31,7 @@
 <script src="js/daterangepicker.js"></script>
 <script src="js/fontawesome-iconpicker.min.js"></script>
 <script src="js/bs-custom-file-input.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="js/morris.min.js"></script>
 <script src="js/login-ajax.js"></script>
 <script src="../js/cotizador.js"></script>
